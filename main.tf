@@ -14,7 +14,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization_too_high" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -34,7 +34,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_credit_balance_too_low" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -55,7 +55,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_too_high" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -75,7 +75,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_free_storage_space_too_low" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -95,7 +95,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_burst_balance_too_low" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -116,7 +116,7 @@ resource "aws_cloudwatch_metric_alarm" "memory_freeable_too_low" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -136,7 +136,7 @@ resource "aws_cloudwatch_metric_alarm" "memory_swap_usage_too_high" {
   ok_actions          = var.actions_ok
 
   dimensions = {
-    DBInstanceIdentifier = var.db_instance_id
+    DBClusterIdentifier = var.db_instance_id
   }
   tags = var.tags
 }
@@ -170,7 +170,7 @@ resource "aws_cloudwatch_metric_alarm" "connection_count_anomalous" {
       unit        = "Count"
 
       dimensions = {
-        DBInstanceIdentifier = var.db_instance_id
+        DBClusterIdentifier = var.db_instance_id
       }
     }
   }
