@@ -65,7 +65,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_free_storage_space_too_low" {
   alarm_name          = "${var.prefix}rds-${var.db_instance_id}-lowFreeStorageSpace"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = var.evaluation_period
-  metric_name         = "FreeStorageSpace"
+  metric_name         = "FreeLocalStorage"
   namespace           = "AWS/RDS"
   period              = var.statistic_period
   statistic           = "Average"
